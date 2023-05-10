@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/975e6eb012.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="head">
+        <img src="image/logo-encriptador.png" alt="logo" class="head__logo" />
+      </header>
+      <main class="main">
+        <div class="input">
+          <!--Cuadro de texto donde se ingresa el texto a encriptar-->
+          <textarea class="input__textinput" id="txtIngresarTexto" placeholder="Ingrese el texto aquí"></textarea>
+          <!--Label que indica que solo se permite letras minusculas y sin acento-->
+          <p id="lblWarning" class="input__help"><i class="fa-solid fa-circle-exclamation" style="color: #495057"></i> solo se permite letras minusculas y sin acento</p>
+          <div class="input__buttons">
+            <!--Botón que ejecuta la encriptación-->
+            <button type="button" id="btnEncriptar" class="btn">Encriptar</button>
+            <!--Botón que ejecuta la desencriptación-->
+            <button type="button" id="btnDesencriptar" class="btn">Desencriptar</button>
+          </div>
+        </div>
+        <div class="output">
+          <!--Cuadro de texto donde se muestra el resultado de la encriptación o desencriptación-->
+          <textarea class="output__textoutput" id="txtMostrarTexto" disabled></textarea>
+          <!--Botón que copia el resultado de la encriptación o desencriptación-->
+          <button type="button" id="btnCopiar" class="btn btn--copiar">Copiar</button>
+          <!--Imagen que indica que "Ningún mensaje fue encontraado"-->
+          <div class="output__image" id="contenedorImageSalida"><img src="image/muneco.png" class="image" id="imageSalida" /></div>
+          <div class="output__helps" id="contenedorParrafoAyuda">
+            <!--Label que indica que "Ningún mensaje fue encontraado" ´ste se pone debajo de la imagen-->
+            <p class="output__help output__help--principal" id="parrafoAyudaPrincipal">Ningún mensaje fue encontrado</p>
+            <p class="output__help output__help--segundario" id="parrafoAyudaSecundario">Ingresa el texto que desees encriptar o desencriptar.</p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
