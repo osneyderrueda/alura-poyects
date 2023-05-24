@@ -37,9 +37,9 @@ function encriptarTexto() {
 function desencriptarTexto() {
   let txtResultado = txtIngresarTexto.value;
 
+  txtResultado = txtResultado.replaceAll("ai", "a");
   txtResultado = txtResultado.replaceAll("enter", "e");
   txtResultado = txtResultado.replaceAll("imes", "i");
-  txtResultado = txtResultado.replaceAll("ai", "a");
   txtResultado = txtResultado.replaceAll("ober", "o");
   txtResultado = txtResultado.replaceAll("ufat", "u");
 
